@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% for q in posts: %}
+        <p class="subject">
+            <a href = "/blog/{{ q.key().id() }}">{{q.subject}}</a>
+        </p>
+        <p class="content">
+            {{ q.content }}
+        </p>
+        <p class="created">
+            {{ q.created }}
+        </p>
+        <br />
+        {% endfor %}
+
+{% endblock%}
